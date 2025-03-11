@@ -241,7 +241,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    cursor: pointer;
+    /* cursor: pointer; */
     position: absolute;
     bottom: -20px;
 }
@@ -423,6 +423,9 @@ main {
     font-family: "Poppins", sans-serif;
     font-size: 12px;
 }
+.pop-button{
+    cursor: pointer;
+}
 
 /* responsiveNess */
 
@@ -471,7 +474,7 @@ main {
 
     .popup-button {
         gap: 0px;
-        cursor: pointer;
+        /* cursor: pointer; */
         position: absolute;
         bottom: -8px;
     }
