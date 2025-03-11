@@ -1,7 +1,9 @@
 // Current symbol
 let currSymbol = "cross";
 
-let arr = ["", "", "", "", "", "", "", "", ""];
+let arr = ["", "", "",
+          "", "", "",
+          "", "", ""];
 
 // Click event for each box ---
 document.querySelectorAll(".box").forEach((e, index) => {
@@ -15,7 +17,7 @@ document.querySelectorAll(".box").forEach((e, index) => {
             e.dataset.taken = true;
             document.querySelector(".curent-player").children[1].style.left = "unset";
             document.querySelector(".curent-player").children[0].style.left = "-100%";
-            // console.log(index);
+            console.log(index);
             arr[index] = "X";
 
         }
@@ -53,41 +55,40 @@ function getWinner() {
                 document.querySelector(".popup-message").style.position = "relative";
                 document.querySelector(".popup-message").style.fontSize = "24px";
                 document.querySelector(".popup-message").style.top = "14%";
-                document.querySelector(".popup-message").style.fontFamily = "Poppins", sans-serif;
+                // document.querySelector(".popup-message").style.top = "14%";
                 // document.querySelector(".popup-message").style.display = "block";
-
-
             }, 1000);
 
             scoreUpdate(arr[a]);
             document.querySelector(".pop-button").addEventListener("click", () => {
                 clearBoard();
             })
-            return;
+
         }
-        else if(arr)
+
+
         if (arr[0] && arr[0] === arr[1] && arr[0] == arr[2]) {
             document.querySelector(".line1").style.display = "block";
         }
-        if (arr[3] && arr[3] === arr[4] && arr[3] == arr[5]) {
+        else if (arr[3] && arr[3] === arr[4] && arr[3] == arr[5]) {
             document.querySelector(".line2").style.display = "block";
         }
-        if (arr[6] && arr[6] === arr[7] && arr[6] == arr[8]) {
+        else if (arr[6] && arr[6] === arr[7] && arr[6] == arr[8]) {
             document.querySelector(".line3").style.display = "block";
         }
-        if (arr[0] && arr[0] === arr[3] && arr[0] == arr[6]) {
+        else if (arr[0] && arr[0] === arr[3] && arr[0] == arr[6]) {
             document.querySelector(".line4").style.display = "block";
         }
-        if (arr[1] && arr[1] === arr[4] && arr[1] == arr[7]) {
+        else if (arr[1] && arr[1] === arr[4] && arr[1] == arr[7]) {
             document.querySelector(".line5").style.display = "block";
         }
-        if (arr[2] && arr[2] === arr[5] && arr[2] == arr[8]) {
+        else if (arr[2] && arr[2] === arr[5] && arr[2] == arr[8]) {
             document.querySelector(".line6").style.display = "block";
         }
-        if (arr[0] && arr[0] === arr[4] && arr[0] == arr[8]) {
+        else if (arr[0] && arr[0] === arr[4] && arr[0] == arr[8]) {
             document.querySelector(".line7").style.display = "block";
         }
-        if (arr[2] && arr[2] === arr[4] && arr[2] == arr[6]) {
+        else if (arr[2] && arr[2] === arr[4] && arr[2] == arr[6]) {
             document.querySelector(".line8").style.display = "block";
         }
 
